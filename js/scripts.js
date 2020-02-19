@@ -5,8 +5,12 @@
 // Cups/16 = Tablespoon
 // Tablespoon*16 = Cups
 
-var cupstospoons = function(cupnumber1) {
-  return cupnumber1 / 16;
+var divide = function(number1, number2) {
+  return number1 / number2;
+};
+
+var multiply = function(number1, number2) {
+  return number1 * number2;
 };
 
 $(document).ready(function() {
@@ -14,8 +18,11 @@ $(document).ready(function() {
   $("form#cupToSpoons").submit(function(event) {
    event.preventDefault();
    console.log("hello");
-    var cupnumber1 = parseInt($("#div1").val());
-    var result = divide(cupnumber1, 16);
-    $("#output").text("yourresultis" + result);
+    var number1 = $("#cups").val();
+    console.log(number1);
+    // var number2 =
+    var result = multiply(number1, 16);
+    console.log(result);
+    $("#output").text("your" + " " + "result" + " " + "is" + " " + result);
   });
 });
