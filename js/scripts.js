@@ -14,15 +14,20 @@ var multiply = function(number1, number2) {
 };
 
 $(document).ready(function() {
-  console.log("pageloaded");
   $("form#cupToSpoons").submit(function(event) {
    event.preventDefault();
-   console.log("hello");
     var number1 = $("#cups").val();
-    console.log(number1);
-    // var number2 =
     var result = multiply(number1, 16);
-    console.log(result);
-    $("#output").text("your" + " " + "result" + " " + "is" + " " + result);
+    $("#output").text("There" + " " + "are" + " " + result + " " + "tablespoons.")
   });
+
+$("form#spoonsToCups").submit(function(event) {
+  event.preventDefault();
+  var number1 = $("#tablespoons").val();
+  console.log(number1);
+  var result = divide(number1, 16);
+  console.log(result);
+  $("#output").text("There" + " " + "are" + " " + result + " " + "cups.")
+  });
+
 });
